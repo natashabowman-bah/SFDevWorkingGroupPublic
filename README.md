@@ -7,7 +7,7 @@ Push to scratch org:
 
 sfdx force:source:push
 
-## Steps for Activity 1
+## Steps for Activity 2
 PreReqs: Activity 1 completed
 
 1. Open VSCode with your existing project folder
