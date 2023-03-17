@@ -7,38 +7,42 @@ Push to scratch org:
 
 sfdx force:source:push
 
+## Steps for Activity 2
+PreReqs: Activity 1 completed
 
-## Steps for Week 1
+1. Open VSCode with your existing project folder
+2. Sign up for a developer org (or if you have requested sfdx permissions in VAPM via an RSR that works too)
+3. For personal developer org, go to setup and enable DevHub
+4. If VAPM, change the login url in the sfdx-project.json to be vapm.my.salesforce.com instead of login.salesforce.com
+5. Next we need to authenticate DevHub for scratch org creation
+   sfdx auth:web:login -d -a DevHub
+   If you missed the -d step, you can set the DevHub config via sfdx force:config:set defaultdevhubusername=DevHub
+6. create scratch org: sfdx force:org:create -f config/project-scratch-def.json -a demo01
+7. deploy: sfdx force:source:deploy -p force-app -u demo01
+8. open the org and play around like normal with: sfdx force:org:open -u demo01
+9. Make a custom object called "<FirstName>_<LastName>__c", add no fields.
+10. sfdx force:source:retrieve -m "CustomObject:<FirstName>_<LastName>__c" -u demo01
+11. verfy the new object exists locally.
+12. add, commit, and push changes to your existing branch. confirm the changes show up in your PR.
+
+
+## Steps for Activity 1
 PreReqs:
-Connect to the VPN
 Download Git
-Navigate the the SFDevGroup repo
+Navigate the the SFDevWorkingGroup repo
 
 https://git-scm.com/download/win
 
 Navigate to the green "Code" dropdown
 
-Choose the SSH Tab
 
-Begin the SSH Key Generation process
-
-Navigate to your settings
-
-Select 'SSH and GPG keys'
-
-Generate new SSH Key
-
-Add a new SSH Key
-
-Add a New SSH Key
-
-Navigate back to repo, back to the 'Code' dropdown and SSH tab
+Navigate to the 'Code' dropdown and HTTPS tab
 
 Copy the address shown
 
 Navigate to VSCode
 
-*where Devlin started* Clone in VSCode using the git clone command
+Clone in VSCode using the git clone command
 
 git clone [addressCopied]
 
