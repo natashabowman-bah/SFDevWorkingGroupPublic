@@ -3,6 +3,5 @@ public with sharing class CoryPrintMyName {
         String name = 'Cory';
         String printedSentence = 'Hi my name is: ' + name;
         System.debug(printedSentence);
-        return printedSentence;
     }
 }
