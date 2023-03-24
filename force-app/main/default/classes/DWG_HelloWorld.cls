@@ -1,3 +1,5 @@
-public with sharing class DWG_HelloWorld {
-    System.debug('Andrew Belz');
+public without sharing class DWG_HelloWorld {
+    public void printName(){
+        System.debug('Andrew Belz');
+    }
 }
