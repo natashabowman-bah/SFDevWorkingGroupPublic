@@ -21,6 +21,27 @@ PreReqs: Activity 2 completed
     sfdx force:org:open -u act03
     OR
     sf org open -o act03
+6. From setup, go to custom metadata types
+7. Click "manage records" for sObject Trigger setting and add an entry for your object from activity 2. Only worry about required fields today.
+8. go back to custom metadata types
+9. Click "manage records" for Trigger Actions and add an entry labeled "YOUR NAME - Before Insert". For load order, enter 1. For the apex class name, use YourName_BeforeInsert. Under the before insert lookup, select your metadata from step 8. add a description and click save.
+10. retrieve the custom metadata from the org to your local
+    sfdx force:source:retrieve -m "CustomMetadata" -u act03
+    OR
+    sf retrieve metadata -m "CustomMetadata" -o act03
+11. on the triggers folder, right click and create a new trigger. Name it "YourNameTrigger". 
+12. Change the trigger on SOBJECT to be your sobject. add all of the trigger events. (before insert, after insert, before update, after update, after delete, after undelete). 
+13. Add one line of code to this trigger-> new MetadataTriggerHandler().run(); (See the JonDevlinTrigger as an example)
+14. create a new class named YourName_BeforeInsert (same as the class name in step 9).
+15. add implements TriggerAction.BeforeInsert to your class name (see JonDevlin_BeforeInsert class example)
+15. add a beforeInsert method that accepts a list of Sobjects. in that method, iterate over all of them and set the name field equal to the string value of your name + the current date. (see JonDevlin_BeforeInsert class example).
+16. deploy the entire project back to the org:
+    sfdx force:source:deploy -p force-app -u act03
+    OR
+    sf deploy metadata -d force-app -o act03
+17. insert a record in the anonymous window in your object: insert(new Your_name__c())
+18. query the record in dev console to confirm the name matches what was done in your trigger. [SELECT Name FROM your_name__c];
+
 
 ## Steps for Activity 2
 PreReqs: Activity 1 completed
