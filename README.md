@@ -16,7 +16,7 @@ PreReqs: Activity 3 completed
     ```
 3. install ZDF
     ```
-    sf package install --package "ZD Framework@0.1.1-1" -w 5 -o act04
+    sf package install --package "ZD Framework@0.1.3-1" -w 5 -o act04
     ```
 4. install trigger actions framework
    ```
