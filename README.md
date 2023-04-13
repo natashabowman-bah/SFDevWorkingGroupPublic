@@ -10,17 +10,29 @@ PreReqs: Activity 2 completed
 
 1. Open VSCode with your existing project folder
 2. create scratch org: 
+    ```
     sfdx force:org:create -f config/project-scratch-def.json -a act03
+    ```
     OR
+    ```
     sf org create scratch -f config/project-scratch-def.json -a act03
+    ```
 3. Install the trigger actions framework unlocked package
+    ```
     sfdx force:package:install --package "04t3h000004VaHaAAK" -r -w 10 -u act 03
+    ```
     or
+    ```
     sf package install -p "04t3h000004VaHaAAK" -r -w 10 -o act03
+    ```
 4. deploy the project
+    ```
     sfdx force:source:deploy -p force-app -u act03
+    ```
     OR
+    ```
     sf deploy metadata -d force-app -o act03
+    ```
 5. open your org
     sfdx force:org:open -u act03
     OR
