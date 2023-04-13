@@ -4,9 +4,9 @@ public with sharing class JonDevlin_BeforeInsert implements TriggerAction.Before
     }
 
     public void beforeInsert(List<SObject> newList){
-        for(SObject sObj : newList){
-            sObj.put('Name', 'Jon Devlin ' + System.now());
-        }
+        System.Callable jonDevlinSvc = new JonDevlinService();
+        jonDevlinSvc.call('setName', new Map<String,Object>{'records' => newList});
+        //jonDevlinSvc.setName(newList);
     }
 
 

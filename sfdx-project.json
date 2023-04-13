@@ -8,5 +8,9 @@
   "name": "sfdevgrouppubic",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "56.0"
+  "sourceApiVersion": "56.0",
+  "packageAliases": {
+    "ZD Framework": "0Ho2E000000PAyGSAW",
+    "ZD Framework@0.1.1-1": "04t2E000002hCa1QAE"
+  }
 }
