@@ -154,12 +154,12 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
-    <label>Dev Working Group Progress</label>
+    <label>TJ Coyle</label>
     <nameField>
-        <label>Dev Working Group Progress Name</label>
+        <label>Name</label>
         <type>Text</type>
     </nameField>
-    <pluralLabel>Dev Working Group Progress</pluralLabel>
+    <pluralLabel>TJ Coyles</pluralLabel>
     <searchLayouts></searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
