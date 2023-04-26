@@ -4,7 +4,7 @@ https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_c
 ## Trigger Action Framework Tutorial
 https://www.apexhours.com/trigger-actions-framework/
 
-## Steps for Activity 3
+## Steps for Activity 4
 PreReqs: Activity 3 completed
 1. update cli to ensure you have the sf commands
     ```
