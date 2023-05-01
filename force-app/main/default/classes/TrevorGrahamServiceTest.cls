@@ -5,7 +5,7 @@ public with sharing class TrevorGrahamServiceTest {
         Graham_Trevor__c tg = new Graham_Trevor__c();
         List<SObject> recordList = new List<SObject>{tg};
         System.Callable svc = new TrevorGrahamService();
-        svc.call('setName', new Map<String,Object>{'records' => recordList});
+        svc.call('setname', new Map<String,Object>{'records' => recordList});
         Assert.areEqual('Trevor Graham - ' + System.now(), tg.Name);
     }
 }

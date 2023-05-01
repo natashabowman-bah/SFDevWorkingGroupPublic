@@ -1,7 +1,7 @@
 public with sharing class TrevorGrahamService extends ZD_VirtualCallable {
     public override Object doCall(String action, Map<String,Object> args){
         switch on action {
-            when 'setName' {
+            when 'setname' {
                 List<SObject> records = (List<SObject>) args.get('records');
                 this.setName(records);
             }
@@ -16,7 +16,7 @@ public with sharing class TrevorGrahamService extends ZD_VirtualCallable {
     private void setName(List<SObject> records){
         for(SObject record : records) {
             DateTime timeStamp = (DateTime) this.call('getTimeStamp');
-            record.put('Name', 'Trevor Graham - ' + timeStamp);
+            record.put('name', 'Trevor Graham - ' + timeStamp);
         }
     }
 }
