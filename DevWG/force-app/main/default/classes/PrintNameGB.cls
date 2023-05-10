@@ -3,6 +3,6 @@ public with sharing class PrintNameGB {
         string fName = 'Gene';
         string sentence = 'My name is '+fName;
         System.debug(sentence);
-        return.sentence;
+        return sentence;
     }
 }
