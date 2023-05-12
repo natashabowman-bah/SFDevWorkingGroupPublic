@@ -20,14 +20,4 @@ public with sharing class FrederickMackmillerServiceTest {
     svc.call('setName', new Map<String, Object>{ 'records' => recordList });
     Assert.areEqual('Frederick Mackmiller - ' + mockedTS, fm.Name);
   }
-
-  /*
-
-     ZD_VirtualCallable svc = new JonDevlinService();
- ZD_Application.startMocking();
- DateTime mockedTS = System.now().addDays(7);
- svc.when('getTimeStamp').thenReturn(mockedTS);
- ZD_Application.stopMocking();
-
-    */
 }
