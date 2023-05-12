@@ -4,6 +4,41 @@ https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_c
 ## Trigger Action Framework Tutorial
 https://www.apexhours.com/trigger-actions-framework/
 
+## Steps for Activity 5
+PreReqs: Activity 4 completed
+1. update cli to ensure you have the sf commands
+    ```
+    sfdx update
+    ```
+2. create scratch org: 
+    ```
+    sf org create scratch -f config/project-scratch-def.json -a act05
+    ```
+3. install ZDF
+    ```
+    sf package install --package "ZDF" -w 5 -o act05
+    ```
+4. install trigger actions framework
+   ```
+   sf package install -p "TAF" -r -w 10 -o act05
+   ```
+5. Add a new test in your service test class based off of the testSetName test from last session. In that test, Mock the getTimeStamp call in your Service class (such as JonDevlinServiceTest) to return System.now().addDays(7) instead of System.now(). The syntax to mock a return value is below:
+   ```
+    ZD_VirtualCallable svc = new JonDevlinService();
+    ZD_Application.startMocking();
+    DateTime mockedTS = System.now().addDays(7);
+    svc.when('getTimeStamp').thenReturn(mockedTS);
+    ZD_Application.stopMocking();
+   ```
+   NOTE: this week we are casting the svc as a ZD_VirtualCallable. Doing so allows us access to the methods virtual callable has. We need access to the mocking methods specifically.
+6. change the assertions to be based off of this mocked timestamp instead of the actual one
+7. deploy your new test to the org via the cli
+8. run the test via the cli and confirm a passing test:
+run the test from the cli
+```
+sf apex run test --class-names "JonDevlinServiceTest" --result-format human --code-coverage -w 2 -o act05 
+```
+
 ## Steps for Activity 4
 PreReqs: Activity 3 completed
 1. update cli to ensure you have the sf commands
