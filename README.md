@@ -51,11 +51,11 @@ PreReqs: Activity 3 completed
     ```
 3. install ZDF
     ```
-    sf package install --package "ZD Framework@0.1.3-1" -w 5 -o act04
+    sf package install --package "ZDF" -w 5 -o act04
     ```
 4. install trigger actions framework
    ```
-   sf package install -p "04t3h000004VaHaAAK" -r -w 10 -o act04
+   sf package install -p "TAF" -r -w 10 -o act04
    ```
 5. create a new Apex class in the classes directory named <YOURNAME>Service, and have it extend the ZD_VirtualCallable class
 6. implement the doCall method in this class, and have it check for an action name of "setname<yourname>" (all lower case). also have it return the current timestamp when the 'gettimestamp' action is called.see below for a generic example:
@@ -120,11 +120,11 @@ PreReqs: Activity 2 completed
     ```
 3. Install the trigger actions framework unlocked package
     ```
-    sfdx force:package:install --package "04t3h000004VaHaAAK" -r -w 10 -u act 03
+    sfdx force:package:install --package "TAF" -r -w 10 -u act 03
     ```
     or
     ```
-    sf package install -p "04t3h000004VaHaAAK" -r -w 10 -o act03
+    sf package install -p "TAF" -r -w 10 -o act03
     ```
 4. deploy the project
     ```
