@@ -4,6 +4,17 @@ https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_c
 ## Trigger Action Framework Tutorial
 https://www.apexhours.com/trigger-actions-framework/
 
+## Remaining Activities
+6. Mocking a method with specific parameters
+7. Mocking a method to execute code
+8. Mocking a method to throw an exception
+9. Mocking an entire instance
+10. Mocking SObjects
+11. Leveraging appConfig
+12. Queueable Apex
+13. Batchable Apex
+14. github actions
+
 ## Steps for Activity 5
 PreReqs: Activity 4 completed
 1. update cli to ensure you have the sf commands
